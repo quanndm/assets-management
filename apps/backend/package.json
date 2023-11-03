@@ -1,0 +1,8 @@
+{
+  "name": "backend-project",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": ".\\venv\\Scripts\\activate && python src/manage.py runserver"
+  }
+}

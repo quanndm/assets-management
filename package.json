@@ -2,12 +2,28 @@
   "name": "@assets-management/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "dev:fe": "nx run frontend:dev",
+    "dev:be": "cd .\\apps\\backend && yarn run dev"
+  },
   "private": true,
   "dependencies": {},
+  "workspaces": [
+    "apps/*"
+  ],
   "devDependencies": {
+    "@nx/eslint-plugin": "^17.0.2",
     "@nx/js": "17.0.2",
     "@nx/workspace": "17.0.2",
-    "nx": "17.0.2"
+    "nx": "17.0.2",
+    "prettier": "^3.0.3"
+  },
+  "engines": {
+    "npm": ">=9.0.0",
+    "node": ">=18.0.0",
+    "yarn": ">=1.22.0"
+  },
+  "nx": {
+    "targets": {}
   }
 }
