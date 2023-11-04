@@ -1,10 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./common/styles/index.scss";
+import Router from "./routes/root.tsx";
+import "react-toastify/dist/ReactToastify.css";
+import ToastWrapper from "./common/components/Toast/ToastContainer.tsx";
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <App />
+    <Router />
+    <ToastWrapper />
   </React.StrictMode>,
-)
+);
