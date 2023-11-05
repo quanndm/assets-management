@@ -28,3 +28,9 @@ python src/manage.py runserver
 ```bash
 pip freeze > requirements.txt
 ```
+
+### option: if you want to create a new app
+
+```bash
+cd src && python manage.py startapp <name_app>
+```
