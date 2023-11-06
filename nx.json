@@ -6,13 +6,8 @@
   "targetDefaults": {
     "build": {
       "cache": true,
-      "dependsOn": [
-        "^build"
-      ],
-      "inputs": [
-        "production",
-        "^production"
-      ]
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
     },
     "lint": {
       "cache": true
@@ -25,14 +20,8 @@
     }
   },
   "namedInputs": {
-    "default": [
-      "{projectRoot}/**/*",
-      "sharedGlobals"
-    ],
-    "production": [
-      "default"
-    ],
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "production": ["default"],
     "sharedGlobals": []
-  },
-  "nxCloudAccessToken": "M2Y2ZWVmYWQtZDkyZS00NjI3LWI4MGUtMmU3YzU5ZTM1ODQzfHJlYWQtd3JpdGU="
+  }
 }
