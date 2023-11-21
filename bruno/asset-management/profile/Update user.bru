@@ -1,0 +1,31 @@
+meta {
+  name: Update user
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{base_url}}/api/profile/2/
+  body: json
+  auth: bearer
+}
+
+headers {
+  Content-Type: application/json
+}
+
+auth:bearer {
+  token: {{access_token}}
+}
+
+body:json {
+  {
+    "user_name": "JohnWick-edit-1",
+    "last_name": "Wick",
+    "first_name": "John",
+    "email": "johnwick1@example.com",
+    "date_of_birth": "2000-06-29",
+    "address" : "",
+    "gender":"M"
+  }
+}

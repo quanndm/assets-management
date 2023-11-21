@@ -1,12 +1,13 @@
 from django.core.mail import send_mail
 from django.conf import settings
+from typing import Optional
 
 
 def send_email(subject: str,
                message: str,
-               html_message: str | None,
-               from_email: str | None,
+               html_message:  Optional[str],
                to_email: list[str],
+               from_email: Optional[str] = None,
                ):
     sender_email = settings.EMAIL_HOST_USER
     if from_email is None:

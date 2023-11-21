@@ -7,5 +7,6 @@ class Supplier(models.Model):
     phone = models.CharField(max_length=256)
     email = models.CharField(max_length=256)
     website = models.CharField(max_length=256)
-    note = models.CharField(max_length=256)
+    note = models.CharField(max_length=256, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
