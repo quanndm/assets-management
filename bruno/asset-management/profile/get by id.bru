@@ -1,0 +1,15 @@
+meta {
+  name: get by id
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/api/profile/2
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{access_token}}
+}

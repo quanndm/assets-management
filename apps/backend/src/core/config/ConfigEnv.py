@@ -1,12 +1,13 @@
 import os
 from dotenv import load_dotenv
 
-from ..dtos import DBConfigInfo, EmailConfigInfo
+from ..dtos import DBConfigInfo, EmailConfigInfo, AdminInfo
 
 
 class ConfigEnv:
     db_config: DBConfigInfo.DBConfigInfo | None = None
     email_config: EmailConfigInfo.EmailConfigInfo | None = None
+    secret_key: str | None = None
 
     def __init__(self):
         # Load environment variables from .env file
@@ -22,7 +23,7 @@ class ConfigEnv:
             driver=os.getenv('DB_DRIVER'),
             engine=os.getenv('DB_ENGINE')
         )
-        if self.db_config.host is None:
+        if self.db_config.host == "":
             self.db_config = None
 
         # Email configuration
@@ -34,6 +35,9 @@ class ConfigEnv:
             use_tls=os.getenv('EMAIL_USE_TLS') or False,
             backend=os.getenv('EMAIL_BACKEND')
         )
+
+        # Secret key
+        self.secret_key = os.getenv('SECRET_KEY')
 
     @classmethod
     def get_instance(cls):
