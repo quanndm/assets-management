@@ -1,5 +1,4 @@
 import { toast } from "react-toastify";
-
 function Home() {
   const showToast = () => {
     toast.success("🦄 Wow so easy!", {});

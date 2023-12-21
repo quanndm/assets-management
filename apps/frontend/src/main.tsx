@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./common/styles/index.scss";
 import Router from "./routes/root.tsx";
 import "react-toastify/dist/ReactToastify.css";
-import ToastWrapper from "./common/components/Toast/ToastContainer.tsx";
+import ToastWrapper from "./components/Toast/ToastContainer.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
